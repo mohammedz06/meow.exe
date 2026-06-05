@@ -58,8 +58,8 @@ The cat theme came because the chassis shape lends itself to a boxy, four-legged
 | PCB | Custom designed | KiCad, ordered from PCBway |
 | Tires | Dollar store rubber bands | Temporary grip solution (it works) |
 
-!(Images/WIP.png)
-!(Images/LengtheningSwitch.png)
+![](Images/WIP.png)
+![](Images/LengtheningSwitch.png)
 
 
 
@@ -87,7 +87,7 @@ The avoidance logic runs as a state machine layered on top of the PID balance lo
 
 The brain is a custom PCB designed in KiCad and ordered from PCBway. It routes the ESP32, A4988 motor driver breakouts, IMU, two LM2596S buck converters, and power management onto a single board so the wiring doesn't look like a bird's nest.
 
-!(Images/PCBDesign.png)
+![](Images/PCBDesign.png)
 
 ### The GND Pin Incident
 
@@ -136,7 +136,7 @@ firmware/
 
 The chassis went through several size iterations before landing on the current design. The first two prints came out too small — motors didn't fit, PCB didn't fit, clearances were wrong. At one point the wheel wells were so tight the motors couldn't turn without binding.
 
-!(Images/OldParts.png)
+![](Images/OldParts.png)
 
 Current print settings that work:
 - **Material:** PLA
@@ -144,9 +144,9 @@ Current print settings that work:
 - **Infill:** 10% gyroid for the body, 12% gyroid for the wheels — kept deliberately low to save weight without sacrificing too much structural integrity
 - **Supports:** Required for the motor mount overhangs
 
-!(Images/BodyCAD.png)
-!(Images/HeadCAD.png)
-!(Images/WheelCAD.png)
+![](Images/BodyCAD.png)
+![](Images/HeadCAD.png)
+![](Images/WheelCAD.png)
 
 The gyroid pattern specifically is worth using for anything load-bearing at low infill — it distributes stress more evenly than grid or lines and holds up better under vibration (which a balancing robot produces constantly).
 

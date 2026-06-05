@@ -58,6 +58,11 @@ The cat theme came because the chassis shape lends itself to a boxy, four-legged
 | PCB | Custom designed | KiCad, ordered from PCBway |
 | Tires | Dollar store rubber bands | Temporary grip solution (it works) |
 
+!(Images/WIP.png)
+!(Images/LengtheningSwitch.png)
+
+
+
 ### The Motor Saga
 
 The original motors were **17HS4023** pancake steppers — compact, low-profile, seemed perfect for keeping the chassis thin. They were not perfect. They produced effectively zero usable torque at the speeds needed for balancing. The robot would lean, the motors would whirr heroically, and then it would fall over anyway.
@@ -74,13 +79,15 @@ The head itself sits on a small servo motor, which rotates the sensor to look le
 
 The avoidance logic runs as a state machine layered on top of the PID balance loop: `BALANCING → REVERSING → SCANNING → TURNING → BALANCING`. The robot stays balanced throughout because the PID never stops running — avoidance just changes what bias gets added to the motor output on top of the balance correction.
 
-> This feature is planned and coded but not yet physically tested — the head servo mount is still being designed.
+> This feature is planned and coded but not yet physically tested.
 
 ---
 
 ## Electronics & PCB
 
 The brain is a custom PCB designed in KiCad and ordered from PCBway. It routes the ESP32, A4988 motor driver breakouts, IMU, two LM2596S buck converters, and power management onto a single board so the wiring doesn't look like a bird's nest.
+
+!(Images/PCBDesign.png)
 
 ### The GND Pin Incident
 
@@ -129,11 +136,17 @@ firmware/
 
 The chassis went through several size iterations before landing on the current design. The first two prints came out too small — motors didn't fit, PCB didn't fit, clearances were wrong. At one point the wheel wells were so tight the motors couldn't turn without binding.
 
+!(Images/OldParts.png)
+
 Current print settings that work:
 - **Material:** PLA
 - **Layer height:** 0.2mm
 - **Infill:** 10% gyroid for the body, 12% gyroid for the wheels — kept deliberately low to save weight without sacrificing too much structural integrity
 - **Supports:** Required for the motor mount overhangs
+
+!(Images/BodyCAD.png)
+!(Images/HeadCAD.png)
+!(Images/WheelCAD.png)
 
 The gyroid pattern specifically is worth using for anything load-bearing at low infill — it distributes stress more evenly than grid or lines and holds up better under vibration (which a balancing robot produces constantly).
 

@@ -1,23 +1,18 @@
 # Meow.exe 🐱
-### A self-balancing two-wheeled robot that really, *really* wants to fall over
+### A self-balancing two-wheeled robot
 
 ---
 
-> **Status:** Mid-build — currently vertical (most of the time)
+> **Status:** 95% Complete (PID Tuning)
 > **Brain:** ESP32
-> **Motivation:** Hubris
 
 ---
 
 ## What is this?
 
-Meow.exe is a self-balancing robot loosely designed to look like a cat. It uses an ESP32 microcontroller, a custom PCB, stepper motors, and an MPU6050 IMU to stay upright. The name comes from the fact that, like a real cat, it is:
+Meow.exe is a self-balancing robot loosely designed to look like a cat. It uses an ESP32 microcontroller, a custom PCB, stepper motors, and an MPU6050 IMU to stay upright
 
-- Unpredictable
-- Occasionally graceful
-- Prone to falling off things and acting like it meant to
-
-This repo documents the full build — hardware, firmware, PCB design, and the many, *many* things that went wrong along the way.
+This repo documents the full build — hardware, firmware, PCB design, and the many things that went wrong along the way.
 
 ---
 
@@ -28,7 +23,7 @@ This repo documents the full build — hardware, firmware, PCB design, and the m
 3. [Electronics & PCB](#electronics--pcb)
 4. [Firmware](#firmware)
 5. [3D Printing](#3d-printing)
-6. [Failures (the good stuff)](#failures-the-good-stuff)
+6. [Failures](#failures)
 7. [Current Status](#current-status)
 8. [What's Next](#whats-next)
 9. [Build Your Own](#build-your-own)
@@ -37,7 +32,7 @@ This repo documents the full build — hardware, firmware, PCB design, and the m
 
 ## The Concept
 
-Self-balancing robots are a classic control systems project — basically an inverted pendulum problem. The robot reads its tilt angle from an IMU, runs that through a PID controller, and drives its wheels to counteract the fall. Simple in theory. Absolutely not simple in practice.
+Self-balancing robots are a classic control systems project, basically an inverted pendulum problem. The robot reads its tilt angle from an IMU, runs that through a PID controller, and drives its wheels to counteract the fall. Simple in theory. Absolutely not simple in practice.
 
 The cat theme came because the chassis shape lends itself to a boxy, four-legged-but-actually-two-wheeled silhouette. Ears on the top enclosure. Tail maybe eventually. We'll see.
 
@@ -143,7 +138,7 @@ All source files are in `/cad` as `.stl` and editable source files.
 
 ---
 
-## Failures (the good stuff)
+## Failures
 
 Every build log should have a section like this. Here's the honest timeline:
 
@@ -190,25 +185,19 @@ TPU filament would have made flexible, grippy tires. TPU filament was not availa
 - [x] Power switch upgraded to something that won't catch fire
 - [x] PCB mounted (foam tape, no judgment)
 - [x] Obstacle avoidance logic written
-- [ ] Head servo mount designed and printed
+- [x] Head servo mount designed and printed
 - [ ] Obstacle avoidance physically tested
 - [ ] PID tuning complete
-- [ ] Stable balancing achieved
+- [x] Stable balancing achieved
 - [ ] Proper TPU tires (currently: rubber bands)
-- [ ] PCB rev 2 with mounting holes
-- [ ] Meow.exe ears installed
-- [ ] Tail (stretch goal)
+- [x] Meow.exe ears installed
 
 ---
 
 ## What's Next
 
-- Finish PID tuning and get stable balance
-- Add Wi-Fi telemetry via ESP32 to tune gains remotely
-- Design and print the aesthetic cat shell (ears, face details)
+- Finish PID tuning and get stable balance while moving
 - Make the LED strip actually look good after all the suffering it caused
-- Potentially add a small OLED display for vibes
-- Figure out if a tail is mechanically feasible or just asking for trouble
 
 ---
 
@@ -233,8 +222,5 @@ If you want to attempt something similar, here's the short version of what I'd t
 ## License
 
 Hardware (PCB, CAD): CERN-OHL-S
-Firmware: MIT
 
 ---
-
-*Follow the build progress: [your website here]*

@@ -12,7 +12,7 @@
 
 Meow.exe is a self-balancing robot loosely designed to look like a cat. It uses an ESP32 microcontroller, a custom PCB, stepper motors, and an MPU6050 IMU to stay upright.
 
-![Image of the (semi) finished robot design](Images/RobotPic.png)
+![Image of the (semi) finished robot design](Images/RobotPic2.png)
 
 
 This repo documents the full build — hardware, firmware, PCB design, and the many things that went wrong along the way.

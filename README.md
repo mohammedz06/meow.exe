@@ -3,7 +3,7 @@
 
 ---
 
-> **Status:** 95% Complete (PID Tuning)
+> **Status:** 90% Complete (PID Tuning)
 > **Brain:** ESP32
 
 ---
@@ -71,6 +71,9 @@ Swapped to **17HS4401s** — longer, heavier, but actually capable of holding to
 
 **Lesson:** For balancing robots, torque at speed matters more than motor compactness. Don't cheap out on the motors.
 
+![](Images/WorkingMotors.gif)
+
+
 ### The Eyes
 
 The cat's head houses an **HC-SR04 ultrasonic sensor** — the eyes. When Meow.exe gets too close to a wall or obstacle, it's supposed to back up, turn its head left and right to scan for a clear path, then turn and continue in whichever direction has more room.
@@ -94,6 +97,8 @@ The brain is a custom PCB designed in KiCad and ordered from PCBway. It routes t
 While laying out the PCB footprint for the MPU6050, the GND pin wasn't set as a through-hole. This only became apparent after the boards came back from fab. The fix involved some creative bodge-wiring to route GND externally — not pretty, but functional.
 
 This is why you double-check every single pin in your footprint before you send to fab. Every single one.
+
+![](Images/NoPCBHole.png)
 
 ### PCB Tuning
 
@@ -186,6 +191,8 @@ The original plan was a tiny KCD1 mini rocker switch — the kind you'd find in 
 **Failure 8 — PCB has nowhere to live**
 Designed the PCB, ordered the PCB, assembled the PCB, then realized there was nowhere to actually mount it inside the chassis. No standoff holes, no integrated slots, no clearance designed around it. The fix was double-sided foam tape, which is functional and used in plenty of real products but was not the original vision. Rev 2 of the PCB will have proper M3 mounting holes. Rev 2 of the chassis will have posts to match.
 
+![](Images/Tape.png)
+
 **Failure 9 — Dollar store rubber bands for tires**
 TPU filament would have made flexible, grippy tires. TPU filament was not available. The wheels were PLA, which has roughly the grip of a bar of soap on most floors. The solution was rubber bands from a dollar store stretched over the wheel rims. It works. It looks exactly like what it is. It will be replaced eventually.
 
@@ -232,11 +239,4 @@ If you want to attempt something similar, here's the short version of what I'd t
 7. **Your power switch must be rated for your battery.** A 4S LiPo can dump enormous current into a fault. A cheap rocker switch is not the place to cut costs.
 8. **Design PCB mounting into your chassis from the start.** Foam tape works but you will be disappointed in yourself.
 9. **If you don't have TPU for grippy tires, rubber bands are a legitimate stopgap.** This is not advice so much as permission.
-
----
-
-## License
-
-Hardware (PCB, CAD): CERN-OHL-S
-
 ---

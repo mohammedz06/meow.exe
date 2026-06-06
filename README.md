@@ -166,7 +166,7 @@ Every build log should have a section like this. Here's the honest timeline:
 **Failure 1 — Wrong motors**
 Ordered 17HS4023 pancake motors because they looked sleek. They could not generate enough torque to balance the robot. Ordered 17HS4401s. Reprinted motor mounts.
 
-**Failure 2 — Print sizing (×multiple)**
+**Failure 2 — Print sizing**
 "It'll definitely fit" — it did not fit. Happened more than once. Each iteration cost a day of print time. Measure twice, print once.
 
 **Failure 3 — PCB footprint GND not through-hole**
@@ -230,13 +230,13 @@ TPU filament would have made flexible, grippy tires. TPU filament was not availa
 
 If you want to attempt something similar, here's the short version of what I'd tell past-me:
 
-1. **Use real torque motors from the start.** Don't let the pancake motors tempt you.
-2. **Check every PCB footprint pin by pin** before sending to fab.
-3. **Print a test piece** at scale before committing to a full chassis print.
-4. **Log everything** — serial output of your IMU angle and PID terms saves hours of guessing.
-5. **The robot will fall over.** Print a sacrificial cover for the IMU.
-6. **Think through your full voltage budget** before adding any "simple" components. One LED strip cost me a buck converter and a battery upgrade.
-7. **Your power switch must be rated for your battery.** A 4S LiPo can dump enormous current into a fault. A cheap rocker switch is not the place to cut costs.
-8. **Design PCB mounting into your chassis from the start.** Foam tape works but you will be disappointed in yourself.
-9. **If you don't have TPU for grippy tires, rubber bands are a legitimate stopgap.** This is not advice so much as permission.
+1. **Use real torque motors from the start.**
+2. **Check every PCB footprint pin by pin**
+3. **Print a test piece**
+4. **Log everything**
+5. **The robot will fall over.**
+6. **Think through your full voltage budget**
+7. **Your power switch must be rated for your battery.**
+8. **Design PCB mounting into your chassis from the start.**
+9. **If you don't have TPU for grippy tires, rubber bands are a legitimate stopgap.**
 ---
